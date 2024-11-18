@@ -4,7 +4,8 @@ import (
 	"flag"
 	"fmt"
 	"os"
-	"rodjc/bioinfotools/gofasta/fasta"
+
+	"github.com/rodjc/gofasta/fasta"
 )
 
 type CmdFlags struct {
@@ -33,7 +34,7 @@ func NewCmdFlags() *CmdFlags {
 
 func (cf *CmdFlags) Execute() {
 	if cf.input == "" {
-		fmt.Println("Error: Please provide a FASTA file path with the -f flag.")
+		// fmt.Println("Error: Please provide a FASTA file path with the -f flag.")
 		flag.Usage()
 		return
 	}
